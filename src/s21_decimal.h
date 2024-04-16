@@ -14,18 +14,18 @@
 #define EQUAL 0
 
 typedef struct {
-    unsigned int bits[4];
+  unsigned int bits[4];
 } s21_decimal;
 
 typedef struct {
-    unsigned int bits[8];
+  unsigned int bits[8];
 } s21_big_decimal;
 
 // Arithmetic Operators
-int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); 
-int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); 
-int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); 
-int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result); 
+int s21_add(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+int s21_sub(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+int s21_mul(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
+int s21_div(s21_decimal value_1, s21_decimal value_2, s21_decimal *result);
 
 // Comparison Operators
 int s21_is_less(s21_decimal value_1, s21_decimal value_2);
@@ -59,10 +59,12 @@ void left_shift(s21_decimal *value, int shift);
 void right_shift(s21_decimal *value, int shift);
 void normalize(s21_big_decimal *value_1, s21_big_decimal *value_2);
 void scale_up(s21_big_decimal *value, int num);
-void bit_addition(s21_big_decimal value_1, s21_big_decimal value_2, s21_big_decimal *result);
+void bit_addition(s21_big_decimal value_1, s21_big_decimal value_2,
+                  s21_big_decimal *result);
 int get_big_bit(s21_big_decimal value, int index);
 void set_big_bit(s21_big_decimal *value, int index, int bit);
-void set_big(s21_big_decimal *value, int bit, int index_32, int rank, int index_96);
+void set_big(s21_big_decimal *value, int bit, int index_32, int rank,
+             int index_96);
 int get_big_sign(s21_big_decimal value);
 void set_big_sign(s21_big_decimal *value, int sign);
 int get_big_exp(s21_big_decimal value);
