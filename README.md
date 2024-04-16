@@ -5,7 +5,7 @@ My study project: development of my own s21_decimal.h library using C programmin
 ## Content
 
 1. [Binary representation](#binary-representation)
-2. [Functions](#functions)
+2. [Functions](#functions) \
     2.1. [Comparison Operators](#comparison-operators)
 
 ## Binary representation
